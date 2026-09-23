@@ -10,7 +10,20 @@ function convertToRoman(num) {
     };
 
   //your code here
+	let result = "";
+	
+	//loop through the mapped obj entries
+	for(let key in obj) {
+		const[symbol, value] = obj[key];
 
+		//while the curr num is greater or equal to the roman symbol value
+		while(num >= value) {
+			result += symbol;   //add the roman symbol to the output
+			num -= value;        //reduce the target number by that value
+		}
+	}
+	
+return result;	
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
