@@ -12,9 +12,9 @@ function convertToRoman(num) {
   //your code here
 	let result = "";
 	
-	//loop through the mapped obj entries
-	for(let key in obj) {
-		const[symbol, value] = obj[key];
+	// Loop through each symbol-value pair step-by-step
+  for (let i = 0; i < obj.length; i++) {
+		const[symbol, value] = obj[i];
 
 		//while the curr num is greater or equal to the roman symbol value
 		while(num >= value) {
